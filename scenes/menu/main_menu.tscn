@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://7usgiin36836"]
+
+[ext_resource type="Texture2D" uid="uid://cicqsnyfy6r5c" path="res://assets/backgrounds/Main Menu.png" id="1_247la"]
+[ext_resource type="Script" uid="uid://4esofl86e73a" path="res://scripts/ui/button-mainmenu/play_container.gd" id="2_kiqgm"]
+[ext_resource type="Texture2D" uid="uid://c6en3icqbe7hf" path="res://assets/button/button.png" id="3_hj162"]
+[ext_resource type="Script" uid="uid://kq374iim8vrk" path="res://scripts/ui/button-mainmenu/play.gd" id="4_kiqgm"]
+
+[node name="MainMenu" type="Control" unique_id=629306698]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="TextureRect" parent="." unique_id=15812919]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("1_247la")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=59695397]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 230.0
+offset_right = 371.0
+offset_bottom = 441.0
+
+[node name="PlayContainer" type="Control" parent="VBoxContainer" unique_id=539437112]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+script = ExtResource("2_kiqgm")
+
+[node name="HoverTexture" type="TextureRect" parent="VBoxContainer/PlayContainer" unique_id=1716795563]
+visible = false
+layout_mode = 0
+offset_right = 199.0
+offset_bottom = 38.0
+texture = ExtResource("3_hj162")
+expand_mode = 1
+
+[node name="PlayLabel" type="Label" parent="VBoxContainer/PlayContainer" unique_id=1391491938]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PLAY"
+script = ExtResource("4_kiqgm")
+
+[node name="PlayContainer2" type="Control" parent="VBoxContainer" unique_id=1968515708]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+script = ExtResource("2_kiqgm")
+
+[node name="HoverTexture" type="TextureRect" parent="VBoxContainer/PlayContainer2" unique_id=225621892]
+visible = false
+layout_mode = 0
+offset_right = 199.0
+offset_bottom = 38.0
+texture = ExtResource("3_hj162")
+expand_mode = 1
+
+[node name="PlayLabel" type="Label" parent="VBoxContainer/PlayContainer2" unique_id=58401786]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SETTING"
+script = ExtResource("4_kiqgm")
+
+[node name="PlayContainer3" type="Control" parent="VBoxContainer" unique_id=912326203]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+script = ExtResource("2_kiqgm")
+
+[node name="HoverTexture" type="TextureRect" parent="VBoxContainer/PlayContainer3" unique_id=1787546964]
+visible = false
+layout_mode = 0
+offset_right = 199.0
+offset_bottom = 38.0
+texture = ExtResource("3_hj162")
+expand_mode = 1
+
+[node name="PlayLabel" type="Label" parent="VBoxContainer/PlayContainer3" unique_id=805381115]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "EXIT"
+script = ExtResource("4_kiqgm")
+
+[connection signal="mouse_entered" from="VBoxContainer/PlayContainer" to="VBoxContainer/PlayContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/PlayContainer" to="VBoxContainer/PlayContainer" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/PlayContainer2" to="VBoxContainer/PlayContainer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/PlayContainer2" to="VBoxContainer/PlayContainer2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/PlayContainer3" to="VBoxContainer/PlayContainer3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/PlayContainer3" to="VBoxContainer/PlayContainer3" method="_on_mouse_exited"]

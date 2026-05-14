@@ -1,0 +1,5 @@
+res://scenes/splash/splash_screen.tscn
+res://scripts/ui/splash_screen.gd
+res://scenes/menu/main_menu.tscn
+res://scripts/ui/button-mainmenu/play_container.gd
+res://scripts/ui/button-mainmenu/play.gd
