@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://diidtab8pq3ig"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_dxsmm"]
+
+[resource]
+script = ExtResource("1_dxsmm")
+card_name = "Stun"
+mana_cost = 1
+damage = 20
+description = "Give Stun"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

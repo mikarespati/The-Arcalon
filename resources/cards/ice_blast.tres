@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_f3e4u")
 card_name = "Ice Blast"
-mana_cost = 5
+mana_cost = 1
 damage = 5
 description = "Deal 5 Damages"
 metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

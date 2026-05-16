@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_3yj1b")
 card_name = "Poiso Blast"
-mana_cost = 30
-damage = 30
-description = "Deal 30 Damage"
+mana_cost = 1
+damage = 15
+description = "Deal 15 Damage"
 metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

@@ -1,10 +1,11 @@
-Control
-Node
 Node2D
-TextureButton
-HBoxContainer
+TextureProgressBar
 Label
 TextureRect
+Control
+Node
+TextureButton
+HBoxContainer
 AnimationPlayer
 RichTextLabel
 Container

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b0s515brpo8ty"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_mpykq"]
+
+[resource]
+script = ExtResource("1_mpykq")
+card_name = "Thunder"
+mana_cost = 1
+damage = 12
+description = "Give enemy thunder"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

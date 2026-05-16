@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dsp2p5piqmbyp"]
 
+[ext_resource type="Texture2D" uid="uid://s45s47e6yuyk" path="res://assets/cards/fireblast.png" id="1_awatx"]
 [ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_g1rsc"]
 
 [resource]
@@ -8,4 +9,5 @@ card_name = "Fire Blast"
 mana_cost = 2
 damage = 10
 description = "Deal 3 Damages. Apply Burn 2 Turn"
+artwork = ExtResource("1_awatx")
 metadata/_custom_type_script = "uid://dyxhjxf8x06mx"
