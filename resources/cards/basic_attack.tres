@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://d3j5k505oym2w"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_lxlmu"]
+
+[resource]
+script = ExtResource("1_lxlmu")
+card_name = "Attack"
+mana_cost = 1
+damage = 5
+description = "Basic Attack"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

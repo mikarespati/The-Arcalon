@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dsp2p5piqmbyp"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_g1rsc"]
+
+[resource]
+script = ExtResource("1_g1rsc")
+card_name = "Fire Blast"
+mana_cost = 2
+damage = 10
+description = "Deal 3 Damages. Apply Burn 2 Turn"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://blck0m0ygekkh"]
+
+[ext_resource type="Script" uid="uid://corba70qwlrmn" path="res://scripts/cards/card.gd" id="1_1q37b"]
+[ext_resource type="Texture2D" uid="uid://bf03clnh5xeyk" path="res://assets/cards/card.png" id="2_mo7yc"]
+[ext_resource type="Texture2D" uid="uid://s45s47e6yuyk" path="res://assets/cards/fireblast.png" id="3_4tkg3"]
+[ext_resource type="FontFile" uid="uid://cscb3j6k2u65r" path="res://assets/fonts/Almendra/Almendra-BoldItalic.ttf" id="4_61bms"]
+[ext_resource type="FontFile" uid="uid://s42mey0d8uem" path="res://assets/fonts/Almendra/Almendra-Bold.ttf" id="5_8cu2g"]
+
+[node name="Card" type="TextureButton" unique_id=1876157408]
+script = ExtResource("1_1q37b")
+
+[node name="CardFrame" type="TextureRect" parent="." unique_id=1469963268]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_mo7yc")
+
+[node name="Artwork" type="TextureRect" parent="." unique_id=854875633]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 48.0
+offset_right = 448.0
+offset_bottom = 291.0
+texture = ExtResource("3_4tkg3")
+
+[node name="CostContainer" type="Control" parent="." unique_id=2106412641]
+anchors_preset = 0
+offset_right = 130.0
+offset_bottom = 134.0
+
+[node name="CostLabel" type="Label" parent="CostContainer" unique_id=914689440]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 12.0
+offset_right = 113.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_61bms")
+theme_override_font_sizes/font_size = 48
+text = "2"
+
+[node name="NameLabel" type="Label" parent="." unique_id=1144370714]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 320.0
+offset_right = 358.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8cu2g")
+theme_override_font_sizes/font_size = 48
+text = "Fire Blast"
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="." unique_id=1049852186]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 447.0
+offset_right = 433.0
+offset_bottom = 586.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_8cu2g")
+theme_override_font_sizes/normal_font_size = 32
+text = "Deal 3 Damage,  Apply     Burn 2 Turn"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1644389039]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

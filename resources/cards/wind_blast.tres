@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dhdcd65xkm2pj"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_4jk2g"]
+
+[resource]
+script = ExtResource("1_4jk2g")
+card_name = "Wind Blast"
+mana_cost = 2
+damage = 15
+description = "Deal 15 Damage"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

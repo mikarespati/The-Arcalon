@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dsnqk5g8021hd"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_3yj1b"]
+
+[resource]
+script = ExtResource("1_3yj1b")
+card_name = "Poiso Blast"
+mana_cost = 30
+damage = 30
+description = "Deal 30 Damage"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

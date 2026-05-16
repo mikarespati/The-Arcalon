@@ -1,8 +1,12 @@
-TextureRect
-Label
 Control
+Node
+Node2D
+TextureButton
+HBoxContainer
+Label
+TextureRect
+AnimationPlayer
+RichTextLabel
 Container
 VBoxContainer
-TextureButton
-AnimationPlayer
 ColorRect

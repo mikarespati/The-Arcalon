@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cfsgem32in2rd"]
+
+[ext_resource type="Script" uid="uid://dyxhjxf8x06mx" path="res://scripts/cards/card_data.gd" id="1_fwqym"]
+
+[resource]
+script = ExtResource("1_fwqym")
+card_name = "Shield"
+mana_cost = 1
+description = "Rise Defend"
+metadata/_custom_type_script = "uid://dyxhjxf8x06mx"

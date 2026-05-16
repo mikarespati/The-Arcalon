@@ -1,5 +1,11 @@
-res://scenes/splash/splash_screen.tscn
-res://scripts/ui/splash_screen.gd
-res://scenes/menu/main_menu.tscn
-res://scripts/ui/button-mainmenu/play_container.gd
-res://scripts/ui/button-mainmenu/play.gd
+res://scripts/cards/card.gd
+res://scenes/cards/card.tscn
+res://scenes/battle/battle_scene.tscn
+res://scripts/battle/battle_manager.gd
+res://scripts/cards/card_data.gd
+res://resources/cards/fire_blast.tres
+res://resources/cards/ice_blast.tres
+res://resources/cards/wind_blast.tres
+res://resources/cards/posion_blast.tres
+res://resources/cards/basic_attack.tres
+res://resources/cards/shield.tres

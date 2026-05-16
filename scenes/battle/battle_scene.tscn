@@ -1,3 +1,181 @@
 [gd_scene format=3 uid="uid://c5paw5matjdn3"]
 
-[node name="BattleScene" type="Node2D" unique_id=1902980377]
+[ext_resource type="Script" uid="uid://3xtormb4wrih" path="res://scripts/battle/battle_scene.gd" id="1_cywj5"]
+[ext_resource type="Texture2D" uid="uid://d1kbubughh767" path="res://assets/backgrounds/battlescenedummy.png" id="1_lbt8a"]
+[ext_resource type="Texture2D" uid="uid://cwxbpba7btcg3" path="res://icon.svg" id="2_cywj5"]
+[ext_resource type="FontFile" uid="uid://s42mey0d8uem" path="res://assets/fonts/Almendra/Almendra-Bold.ttf" id="3_2wmvw"]
+[ext_resource type="Texture2D" uid="uid://dqfqgvqd30mpr" path="res://assets/button/mana.png" id="5_2wmvw"]
+[ext_resource type="PackedScene" uid="uid://blck0m0ygekkh" path="res://scenes/cards/card.tscn" id="5_7hnyd"]
+[ext_resource type="Texture2D" uid="uid://b1i8na7tg1tff" path="res://assets/button/endturn.png" id="7_ww1p6"]
+[ext_resource type="Script" uid="uid://dgt30coifqmsm" path="res://scripts/battle/battle_manager.gd" id="8_2wmvw"]
+
+[node name="BattleScene" type="Control" unique_id=1331431013]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cywj5")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1384038492]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+texture = ExtResource("1_lbt8a")
+expand_mode = 1
+
+[node name="EnemyArea" type="Control" parent="." unique_id=1052622917]
+anchors_preset = 0
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 940.0
+offset_bottom = 240.0
+
+[node name="EnemySprite" type="TextureRect" parent="EnemyArea" unique_id=1102325801]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cywj5")
+
+[node name="EnemyHP" type="Label" parent="EnemyArea" unique_id=2138414526]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 136.0
+offset_right = 93.0
+offset_bottom = 159.0
+text = "HP : 30"
+
+[node name="EnemyIntent" type="TextureRect" parent="EnemyArea" unique_id=766419731]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayArea" type="Control" parent="." unique_id=67190383]
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 240.0
+offset_bottom = 240.0
+
+[node name="PlayerSprite" type="TextureRect" parent="PlayArea" unique_id=1700531806]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cywj5")
+
+[node name="PlayerHP" type="Label" parent="PlayArea" unique_id=19039718]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 137.0
+offset_right = 92.0
+offset_bottom = 160.0
+text = "HP : 50"
+
+[node name="BuffArea" type="HBoxContainer" parent="PlayArea" unique_id=640277500]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopUI" type="Control" parent="." unique_id=148822058]
+anchors_preset = 0
+offset_left = 520.0
+offset_right = 560.0
+offset_bottom = 40.0
+
+[node name="WaveLabel" type="Label" parent="TopUI" unique_id=42462404]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_2wmvw")
+theme_override_font_sizes/font_size = 48
+text = "Wave 1"
+
+[node name="BattleInfo" type="Label" parent="TopUI" unique_id=44470035]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BottomUI" type="Control" parent="." unique_id=1923589907]
+anchors_preset = 0
+offset_top = 600.0
+offset_right = 40.0
+offset_bottom = 640.0
+
+[node name="ManaUI" type="Control" parent="BottomUI" unique_id=1533081491]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ManaCrystal" type="TextureRect" parent="BottomUI/ManaUI" unique_id=2076015132]
+layout_mode = 0
+offset_left = 47.0
+offset_top = -159.0
+offset_right = 122.0
+offset_bottom = -79.0
+texture = ExtResource("5_2wmvw")
+expand_mode = 1
+
+[node name="ManaLabel" type="Label" parent="BottomUI/ManaUI" unique_id=2113184367]
+layout_mode = 0
+offset_left = 76.0
+offset_top = -143.0
+offset_right = 118.0
+offset_bottom = -100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2wmvw")
+theme_override_font_sizes/font_size = 32
+text = "5/5"
+
+[node name="HandArea" type="Control" parent="BottomUI" unique_id=427398777]
+anchors_preset = 0
+offset_left = 386.0
+offset_top = -144.0
+offset_right = 426.0
+offset_bottom = -104.0
+
+[node name="Card" parent="BottomUI/HandArea" unique_id=1876157408 instance=ExtResource("5_7hnyd")]
+layout_mode = 0
+offset_top = -25.0
+offset_bottom = -25.0
+rotation = -0.08726646
+scale = Vector2(0.4, 0.4)
+
+[node name="Card2" parent="BottomUI/HandArea" unique_id=665957616 instance=ExtResource("5_7hnyd")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -25.0
+offset_right = 80.0
+offset_bottom = -25.0
+rotation = -0.034906585
+scale = Vector2(0.4, 0.4)
+
+[node name="Card3" parent="BottomUI/HandArea" unique_id=726608247 instance=ExtResource("5_7hnyd")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = -25.0
+offset_right = 160.0
+offset_bottom = -25.0
+rotation = 0.034906585
+scale = Vector2(0.4, 0.4)
+
+[node name="Card4" parent="BottomUI/HandArea" unique_id=563192270 instance=ExtResource("5_7hnyd")]
+layout_mode = 0
+offset_left = 240.0
+offset_top = -25.0
+offset_right = 240.0
+offset_bottom = -25.0
+rotation = 0.08726646
+scale = Vector2(0.4, 0.4)
+
+[node name="EndTurn" type="TextureButton" parent="BottomUI" unique_id=527246772]
+layout_mode = 0
+offset_left = 888.0
+offset_top = -152.0
+offset_right = 1336.0
+offset_bottom = -71.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_ww1p6")
+
+[node name="BattleEffects" type="Node2D" parent="." unique_id=1881414476]
+
+[node name="BattleManager" type="Node" parent="." unique_id=2118169017 groups=["battle_manager"]]
+script = ExtResource("8_2wmvw")
+
+[connection signal="pressed" from="BottomUI/EndTurn" to="BattleManager" method="_on_end_turn_pressed"]
