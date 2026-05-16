@@ -12,13 +12,15 @@ var current_mana = 3
 
 func update_ui():
 	$"../BottomUI/ManaUI/ManaLabel".text = str(current_mana)
-	$"../EnemyArea/EnemyHP".text = "HP : " + str(enemy_hp)
-	$"../PlayArea/PlayerHP".text = "HP : " + str(player_hp)
+	get_node("/root/BattleScene/BattleEffects/EnemyHPBar/EnemyHP").text = str(enemy_hp) + "/50"
+	get_node("/root/BattleScene/BattleEffects/PlayerHPBar/PlayerHP").text = str(player_hp) + "/50"
 	$"../BottomUI/LeftDeckUI/DeckCountLabel".text = str(deck.size())
 	$"../BottomUI/RightDeckUI/DiscardCountLabel".text = str(discard_pile.size())
+	get_node("/root/BattleScene/BattleEffects/EnemyHPBar").value = enemy_hp
+	get_node("/root/BattleScene/BattleEffects/PlayerHPBar").value = player_hp
+	
 
 func _ready():
-
 	deck = [
 
 		preload("res://resources/cards/fire_blast.tres"),
@@ -118,6 +120,8 @@ func enemy_turn():
 	var enemy_damage = 6
 
 	player_hp -= enemy_damage
+	animate_player_hp()
+	update_ui()
 
 	check_battle_result()
 
@@ -191,3 +195,33 @@ func discard_card(card_data):
 	used_cards.append(card_data)
 
 	update_hand_visual()
+
+func animate_enemy_hp():
+	print("ANIMASI JALAN")
+	var hp_bar = $"../BattleEffects/EnemyHPBar"
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		hp_bar,
+		"value",
+		enemy_hp,
+		0.3
+	)
+
+func animate_player_hp():
+
+	var hp_bar = get_node("/root/BattleScene/BattleEffects/PlayerHPBar")
+
+	var tween = create_tween()
+
+	tween.set_trans(Tween.TRANS_SINE)
+
+	tween.set_ease(Tween.EASE_OUT)
+
+	tween.tween_property(
+		hp_bar,
+		"value",
+		player_hp,
+		0.3
+	)

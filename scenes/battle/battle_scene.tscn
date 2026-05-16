@@ -4,9 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://d1kbubughh767" path="res://assets/backgrounds/battlescenedummy.png" id="1_lbt8a"]
 [ext_resource type="Texture2D" uid="uid://cwxbpba7btcg3" path="res://icon.svg" id="2_cywj5"]
 [ext_resource type="FontFile" uid="uid://s42mey0d8uem" path="res://assets/fonts/Almendra/Almendra-Bold.ttf" id="3_2wmvw"]
+[ext_resource type="Texture2D" uid="uid://dpl2oqur1cr21" path="res://assets/ui/healthempty.png" id="4_3511k"]
 [ext_resource type="Texture2D" uid="uid://dqfqgvqd30mpr" path="res://assets/button/mana.png" id="5_2wmvw"]
 [ext_resource type="PackedScene" uid="uid://blck0m0ygekkh" path="res://scenes/cards/card.tscn" id="5_7hnyd"]
 [ext_resource type="Texture2D" uid="uid://74cshyd6d82y" path="res://assets/cards/leftdeck.png" id="5_dddu7"]
+[ext_resource type="Texture2D" uid="uid://c6lb2lihesvr" path="res://assets/ui/healthfull.png" id="5_puhd7"]
 [ext_resource type="Texture2D" uid="uid://b1i8na7tg1tff" path="res://assets/button/endturn.png" id="7_ww1p6"]
 [ext_resource type="Script" uid="uid://dgt30coifqmsm" path="res://scripts/battle/battle_manager.gd" id="8_2wmvw"]
 [ext_resource type="Texture2D" uid="uid://4o562y4mu3m" path="res://assets/cards/rightdeck.png" id="8_3511k"]
@@ -36,16 +38,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_cywj5")
 
-[node name="EnemyHP" type="Label" parent="EnemyArea" unique_id=2138414526]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 138.0
-offset_right = 106.0
-offset_bottom = 161.0
-theme_override_fonts/font = ExtResource("3_2wmvw")
-theme_override_font_sizes/font_size = 12
-text = "50/50"
-
 [node name="EnemyIntent" type="TextureRect" parent="EnemyArea" unique_id=766419731]
 layout_mode = 0
 offset_right = 40.0
@@ -63,14 +55,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_cywj5")
-
-[node name="PlayerHP" type="Label" parent="PlayArea" unique_id=19039718]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 137.0
-offset_right = 92.0
-offset_bottom = 160.0
-text = "HP : 50"
 
 [node name="BuffArea" type="HBoxContainer" parent="PlayArea" unique_id=640277500]
 layout_mode = 0
@@ -239,7 +223,49 @@ offset_bottom = -71.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("7_ww1p6")
 
-[node name="BattleEffects" type="Node2D" parent="." unique_id=1881414476]
+[node name="BattleEffects" type="Node2D" parent="." unique_id=842469164]
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="BattleEffects" unique_id=1422013755]
+offset_left = 868.0
+offset_top = 335.0
+offset_right = 1266.0
+offset_bottom = 378.0
+scale = Vector2(0.5, 0.5)
+max_value = 50.0
+value = 30.0
+texture_under = ExtResource("4_3511k")
+texture_progress = ExtResource("5_puhd7")
+
+[node name="EnemyHP" type="Label" parent="BattleEffects/EnemyHPBar" unique_id=2138414526]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 6.0
+offset_right = 202.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("3_2wmvw")
+theme_override_font_sizes/font_size = 24
+text = "50/50"
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="BattleEffects" unique_id=176557817]
+offset_left = 160.0
+offset_top = 335.0
+offset_right = 558.0
+offset_bottom = 378.0
+scale = Vector2(0.5, 0.5)
+max_value = 50.0
+value = 50.0
+texture_under = ExtResource("4_3511k")
+texture_progress = ExtResource("5_puhd7")
+
+[node name="PlayerHP" type="Label" parent="BattleEffects/PlayerHPBar" unique_id=19039718]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("3_2wmvw")
+theme_override_font_sizes/font_size = 24
+text = "50/50"
 
 [node name="BattleManager" type="Node" parent="." unique_id=2118169017 groups=["battle_manager"]]
 script = ExtResource("8_2wmvw")

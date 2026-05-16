@@ -1,73 +1,89 @@
-# THE ARCALON
+# The Arcalon
 
-A dark fantasy roguelike deckbuilding game inspired by tactical card combat games.
+A dark fantasy roguelike deckbuilder inspired by Slay the Spire.
 
-## About
+## Overview
 
-The Arcalon is a turn-based card battler where players manage mana, build strategies, and defeat powerful enemies using magical cards.
+The Arcalon is a turn-based card battler where players use powerful cards, mana management, and strategy to defeat enemies in tactical combat.
 
-This project is currently in prototype development.
-
----
-
-## Current Features
-
-- Splash Screen
-- Main Menu
-- Battle Scene
-- Hover Card System
-- Mana System
-- Random Card Draw
-- Turn System
-- Enemy Damage System
-- Victory / Defeat System
-- Data-Driven Card Architecture
+Built with Godot Engine.
 
 ---
 
-## Gameplay Prototype
+# Current Prototype Features
 
-Current gameplay loop:
+## Core Combat System
 
-1. Draw 4 random cards
-2. Use cards to attack enemies
-3. Spend mana strategically
-4. End turn
-5. Enemy attacks back
-6. Draw new cards
-7. Win or lose the battle
+* Turn-based battle system
+* Mana system
+* Animated HP bars
+* Enemy attack system
+* Victory & defeat states
 
----
+## Card System
 
-## Tech Stack
+* Data-driven card architecture
+* Random hand draw
+* Deck & discard pile system
+* Hover card interaction
+* Dynamic card stats and artwork
 
-- Engine: Godot Engine
-- Language: GDScript
-- Version Control: Git & GitHub
+## Battle UI
 
----
-
-## Development Roadmap
-
-### Prototype Phase
-- [x] Battle System
-- [x] Mana System
-- [x] Card Hover Effect
-- [x] Random Card Draw
-- [ ] Enemy Intent System
-- [ ] Relic System
-- [ ] Map Progression
-- [ ] Sound & VFX
-- [ ] Save System
+* Animated enemy HP bar
+* Animated player HP bar
+* Deck counter
+* Discard counter
+* Interactive battle interface
 
 ---
 
-## Screenshots
+# Current Gameplay Loop
+
+1. Start battle
+2. Draw 5 cards
+3. Use cards with mana cost
+4. Damage enemy
+5. End turn
+6. Enemy attacks player
+7. Cards reshuffle into deck
+8. Repeat until victory or defeat
+
+---
+
+# Tech Stack
+
+* Engine: Godot 4
+* Language: GDScript
+
+---
+
+# Planned Features
+
+* Status effect system
+* Enemy intent system
+* Floating damage text
+* Sound effects
+* Battle animations
+* Multiple enemies
+* Boss fights
+* Relic & upgrade system
+* Procedural encounters
+
+---
+
+# Project Status
+
+Prototype In Development
+
+---
+
+# Screenshots
 
 (Coming Soon)
 
 ---
 
-## Status
+# Developer
 
-Currently in active development.
+Mika Respati

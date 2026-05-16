@@ -35,6 +35,7 @@ func _pressed():
 	if battle_manager.current_mana >= mana_cost:
 		battle_manager.current_mana -= mana_cost
 		battle_manager.enemy_hp -= damage
+		battle_manager.animate_enemy_hp()
 		battle_manager.discard_card(card_data)
 		battle_manager.update_ui()
 		battle_manager.check_battle_result()
